@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+@Roastimages = RoastImage.create([
+  { name: "animal",
+    img_url: "https://ilovefunnyanimalpics.files.wordpress.com/2010/01/funny-animals-fat-cow.jpg"
+  },
+
+  { name: "people",
+    img_url: "http://www.drodd.com/images8/funny-face15.jpeg"
+  }
+
+  ])
