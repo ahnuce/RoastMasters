@@ -1,0 +1,59 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ .navStyle {
+   height: 75px;
+   border-style: solid;
+ }
+body {
+  background-image: url(http://eskipaper.com/images/minimal-white-wallpaper-1.jpg);
+}
+ .fieldDiv {
+   justify-content: center;
+   text-align: center;
+   border-style: solid;
+   width: 250px;
+   background-color: lightgray;
+   border-color: lightblue;
+ }
+ .fieldDiv:hover {
+   border-style: inset;
+   border-color: darkblue;
+ }
+.loginDiv:hover {
+  border-style: inset;
+  border-color: darkblue;
+
+}
+ .loginDiv {
+   justify-content: center;
+   text-align: center;
+   border-style: solid;
+   width: 250px;
+   background-color: lightgray;
+   border-color: lightblue;
+
+ }
+ #signupH2, #loginH2 {
+    font-family: amarillo;
+    font-size: 40px;
+ }
+ #loginTitle {
+   font-family: air millhouse outline;
+   font-size: 70px;
+   border-style: solid;
+   text-shadow: 2px 2px red;
+ }

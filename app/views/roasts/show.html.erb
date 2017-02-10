@@ -1,0 +1,39 @@
+<div>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @roast.body %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @roast.user %>
+</p>
+
+<%= link_to 'Edit', edit_roast_path(@roast) %> |
+<%= link_to 'Back', roasts_path %>
+
+
+
+
+
+
+
+
+
+<div id="disqus_thread"></div>
+<script>
+(function() {
+var d = document, s = d.createElement('script');
+s.src = '//roastmasters.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript><a href="https://disqus.com/?ref_noscript"></a></noscript>
+<script id="dsq-count-scr" src="//roastmasters.disqus.com/count.js" async></script>
+
+
+
+</div>
