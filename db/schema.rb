@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170210204835) do
+ActiveRecord::Schema.define(version: 20170211042843) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "roast_images", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "img_url"
+    t.string   "name"
+  end
 
   create_table "roasts", force: :cascade do |t|
     t.string   "body"
@@ -25,6 +32,7 @@ ActiveRecord::Schema.define(version: 20170210204835) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "img_url"
     t.index ["user_id"], name: "index_roasts_on_user_id", using: :btree
   end
 
