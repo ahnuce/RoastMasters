@@ -1,4 +1,6 @@
 <p id="notice"><%= notice %></p>
-<%=image_tag @roast_image.img_url %>
+<%= image_tag @roast_image.img_url %>
+
+
 <%= link_to 'Edit', edit_roast_image_path(@roast_image) %> |
 <%= link_to 'Back', roast_images_path %>
