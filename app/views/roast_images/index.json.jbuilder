@@ -1,1 +1,0 @@
-json.array! @roast_images, partial: 'roast_images/roast_image', as: :roast_image

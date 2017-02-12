@@ -10,26 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170212042629) do
+ActiveRecord::Schema.define(version: 20170212205008) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "comments", force: :cascade do |t|
-    t.text     "content"
+    t.text     "body"
     t.integer  "roast_id"
-    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["roast_id"], name: "index_comments_on_roast_id", using: :btree
-    t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
-  end
-
-  create_table "roast_images", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "img_url"
-    t.string   "name"
   end
 
   create_table "roasts", force: :cascade do |t|
@@ -62,7 +53,6 @@ ActiveRecord::Schema.define(version: 20170212042629) do
     t.datetime "updated_at",                          null: false
     t.string   "image"
     t.string   "avatar_file_name"
-    t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
@@ -70,6 +60,5 @@ ActiveRecord::Schema.define(version: 20170212042629) do
   end
 
   add_foreign_key "comments", "roasts"
-  add_foreign_key "comments", "users"
   add_foreign_key "roasts", "users"
 end
