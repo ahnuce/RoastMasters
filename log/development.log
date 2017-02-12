@@ -31641,3 +31641,508 @@ Processing by RoastsController#show as HTML
 Completed 200 OK in 75ms (Views: 55.0ms | ActiveRecord: 8.8ms)
 
 
+Started GET "/roasts" for 127.0.0.1 at 2017-02-11 16:01:30 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (57.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (11.8ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (99.3ms)
+Completed 200 OK in 635ms (Views: 466.5ms | ActiveRecord: 68.8ms)
+
+
+Started GET "/roasts/5" for 127.0.0.1 at 2017-02-11 16:01:35 -0500
+Processing by RoastsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (14.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRoast Load (3.5ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering roasts/show.html.erb within layouts/application
+  Rendered roasts/show.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 172ms (Views: 109.3ms | ActiveRecord: 17.8ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-11 16:01:43 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (40.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (4.4ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (87.1ms)
+Completed 200 OK in 448ms (Views: 326.3ms | ActiveRecord: 45.1ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2017-02-11 16:03:52 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (11.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 136ms (ActiveRecord: 13.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-11 16:03:53 -0500
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-02-11 16:03:53 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (8.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (58.9ms)
+Completed 200 OK in 175ms (Views: 150.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-02-11 16:03:57 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m5IodiOrWapE0dWMWKKdyFD1JSqIzw2ys8RmSjx1xkfGiRHShyALm3PodMManMx5uwdDCZWc6mIunNq2vnkeew==", "user"=>{"email"=>"ahnuce@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (38.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "ahnuce@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (50.8ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", 2017-02-11 21:03:58 UTC], ["last_sign_in_at", 2017-02-10 20:27:09 UTC], ["sign_in_count", 18], ["updated_at", 2017-02-11 21:03:58 UTC], ["id", 1]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 417ms (ActiveRecord: 91.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-11 16:03:58 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (12.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/roasts
+Completed 302 Found in 20ms (ActiveRecord: 12.8ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-11 16:03:58 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (18.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (1.2ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 116ms (Views: 89.9ms | ActiveRecord: 19.7ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-11 16:05:17 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (3.2ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (64.2ms)
+Completed 200 OK in 283ms (Views: 216.8ms | ActiveRecord: 7.3ms)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8560156204605661950);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (28.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateComments (20170212042629)
+  [1m[35m (15.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (398.7ms)[0m  [1m[35mCREATE TABLE "comments" ("id" serial primary key, "content" text, "roast_id" integer, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c60ac69998"
+FOREIGN KEY ("roast_id")
+  REFERENCES "roasts" ("id")
+, CONSTRAINT "fk_rails_03de2dc08c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (16.3ms)[0m  [1m[35mCREATE  INDEX  "index_comments_on_roast_id" ON "comments"  ("roast_id")[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE  INDEX  "index_comments_on_user_id" ON "comments"  ("user_id")[0m
+  [1m[35mSQL (40.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170212042629"]]
+  [1m[35m (25.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8560156204605661950)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/roasts" for 127.0.0.1 at 2017-02-11 23:47:27 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (18.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (7.1ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (86.6ms)
+Completed 200 OK in 709ms (Views: 328.6ms | ActiveRecord: 116.5ms)
+
+
+Started GET "/roasts/4" for 127.0.0.1 at 2017-02-11 23:47:35 -0500
+Processing by RoastsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (35.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRoast Load (30.2ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering roasts/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (34.7ms)
+  Rendered roasts/show.html.erb within layouts/application (58.3ms)
+Completed 500 Internal Server Error in 194ms (ActiveRecord: 65.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    1: <%= form_for([@post, @post.comments.build]) do |f| %>
+    2: 
+    3: 
+    4:   <%= f.text_area :content %>
+  
+app/views/comments/_form.html.erb:1:in `_app_views_comments__form_html_erb__178824302949644857_70309149616560'
+app/views/roasts/show.html.erb:12:in `_app_views_roasts_show_html_erb__3247853499133564158_70309160422960'
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (39.1ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (29.9ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.3ms)
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (197.7ms)
+Started GET "/roasts/4" for 127.0.0.1 at 2017-02-11 23:47:57 -0500
+Processing by RoastsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (19.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRoast Load (3.5ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering roasts/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (93.4ms)
+  Rendered roasts/show.html.erb within layouts/application (118.5ms)
+Completed 500 Internal Server Error in 224ms (ActiveRecord: 22.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for #<Roast:0x007fe43f2f1388>
+Did you mean?  committed!):
+    1: <%= form_for([@roast, @roast.comments.build]) do |f| %>
+    2: 
+    3: 
+    4:   <%= f.text_area :content %>
+  
+app/views/comments/_form.html.erb:1:in `_app_views_comments__form_html_erb__178824302949644857_70309121332640'
+app/views/roasts/show.html.erb:12:in `_app_views_roasts_show_html_erb__3247853499133564158_70309144648400'
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (21.6ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (20.9ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.3ms)
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (150.6ms)
+Started GET "/roasts/4" for 127.0.0.1 at 2017-02-11 23:50:08 -0500
+Processing by RoastsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRoast Load (19.2ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering roasts/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (418.7ms)
+  Rendered roasts/show.html.erb within layouts/application (442.0ms)
+Completed 200 OK in 992ms (Views: 549.5ms | ActiveRecord: 115.1ms)
+
+
+Started POST "/roasts/4/comments" for 127.0.0.1 at 2017-02-11 23:51:36 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tTBQJPTUDiF2R4jKKMWMUeVHjPdSzvACYNwaRH18FrGkfOmU+vyXUEmTX8IcxGBxv/NL61iSAVianPsCbC4Utg==", "comment"=>{"content"=>"evolution at its finest"}, "commit"=>"Create Comment", "roast_id"=>"4"}
+  [1m[36mRoast Load (0.9ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Unpermitted parameter: content
+  [1m[35m (6.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (132.6ms)[0m  [1m[32mINSERT INTO "comments" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", 2017-02-12 04:51:36 UTC], ["updated_at", 2017-02-12 04:51:36 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 273ms (ActiveRecord: 143.6ms)
+
+
+  
+NoMethodError (undefined method `idea' for #<User:0x007fe433751218>):
+  
+app/controllers/comments_controller.rb:6:in `create'
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (55.0ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (22.6ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.2ms)
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (244.9ms)
+Started POST "/roasts/4/comments" for 127.0.0.1 at 2017-02-11 23:51:57 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tTBQJPTUDiF2R4jKKMWMUeVHjPdSzvACYNwaRH18FrGkfOmU+vyXUEmTX8IcxGBxv/NL61iSAVianPsCbC4Utg==", "comment"=>{"content"=>"evolution at its finest"}, "commit"=>"Create Comment", "roast_id"=>"4"}
+  [1m[36mRoast Load (6.8ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Unpermitted parameter: content
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (25.2ms)[0m  [1m[32mINSERT INTO "comments" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", 2017-02-12 04:51:58 UTC], ["updated_at", 2017-02-12 04:51:58 UTC]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (26.7ms)[0m  [1m[33mUPDATE "comments" SET "user_id" = $1, "updated_at" = $2 WHERE "comments"."id" = $3[0m  [["user_id", 1], ["updated_at", 2017-02-12 04:51:58 UTC], ["id", 2]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/roasts/4
+Completed 302 Found in 392ms (ActiveRecord: 135.9ms)
+
+
+Started GET "/roasts/4" for 127.0.0.1 at 2017-02-11 23:51:58 -0500
+Processing by RoastsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (29.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRoast Load (20.7ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering roasts/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (36.9ms)
+  Rendered roasts/show.html.erb within layouts/application (46.3ms)
+Completed 200 OK in 240ms (Views: 130.9ms | ActiveRecord: 50.6ms)
+
+
+Started POST "/roasts/4/comments" for 127.0.0.1 at 2017-02-11 23:52:07 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TxvOL2vEP6oyQbN1WTENdnrrT28lkzN8fuzmYcLIHOJeV3efZeym2w2VZH1tMOFWIF+Icy/PwiaErAcn05oe5Q==", "comment"=>{"content"=>"evolution at its finest"}, "commit"=>"Create Comment", "roast_id"=>"4"}
+  [1m[36mRoast Load (20.1ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Unpermitted parameter: content
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (24.9ms)[0m  [1m[32mINSERT INTO "comments" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", 2017-02-12 04:52:07 UTC], ["updated_at", 2017-02-12 04:52:07 UTC]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (12.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (30.0ms)[0m  [1m[33mUPDATE "comments" SET "user_id" = $1, "updated_at" = $2 WHERE "comments"."id" = $3[0m  [["user_id", 1], ["updated_at", 2017-02-12 04:52:07 UTC], ["id", 3]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/roasts/4
+Completed 302 Found in 187ms (ActiveRecord: 96.6ms)
+
+
+Started GET "/roasts/4" for 127.0.0.1 at 2017-02-11 23:52:07 -0500
+Processing by RoastsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (12.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRoast Load (0.4ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering roasts/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (20.8ms)
+  Rendered roasts/show.html.erb within layouts/application (45.2ms)
+Completed 200 OK in 152ms (Views: 127.1ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-11 23:52:15 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (21.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (19.1ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (49.9ms)
+Completed 200 OK in 163ms (Views: 103.0ms | ActiveRecord: 40.1ms)
+
+
+Started GET "/roasts/4" for 127.0.0.1 at 2017-02-11 23:52:18 -0500
+Processing by RoastsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (13.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRoast Load (0.4ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering roasts/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (30.5ms)
+  Rendered roasts/show.html.erb within layouts/application (53.7ms)
+Completed 200 OK in 190ms (Views: 137.0ms | ActiveRecord: 13.8ms)
+
+
+Started POST "/roasts/4/comments" for 127.0.0.1 at 2017-02-11 23:53:26 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZMziumV5xAE7ZV/xG/nVrQXh1KOHbiFZZzgc9x699Px1gFsKa1FdcASxiPkv+DmNX1UTv40y0AOdeP2xD+/2+w==", "comment"=>{"content"=>"evolution at its finest\r\n"}, "commit"=>"Create Comment", "roast_id"=>"4"}
+  [1m[36mRoast Load (0.6ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Unpermitted parameter: content
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (11.8ms)[0m  [1m[32mINSERT INTO "comments" ("roast_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["roast_id", 4], ["created_at", 2017-02-12 04:53:26 UTC], ["updated_at", 2017-02-12 04:53:26 UTC]]
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (8.9ms)[0m  [1m[33mUPDATE "comments" SET "user_id" = $1, "updated_at" = $2 WHERE "comments"."id" = $3[0m  [["user_id", 1], ["updated_at", 2017-02-12 04:53:26 UTC], ["id", 4]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/roasts/4
+Completed 302 Found in 208ms (ActiveRecord: 33.4ms)
+
+
+Started GET "/roasts/4" for 127.0.0.1 at 2017-02-11 23:53:26 -0500
+Processing by RoastsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (7.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRoast Load (0.5ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering roasts/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (8.9ms)
+  Rendered roasts/show.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 118ms (Views: 94.4ms | ActiveRecord: 8.1ms)
+
+
+Started POST "/roasts/4/comments" for 127.0.0.1 at 2017-02-11 23:58:13 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9Eej206lhuPYZvUrtppr4EB5USKIEa0Bsw+sp8ih3FPlCxprQI0fkueyIiOCm4fAGs2WPoJNXFtJT03h2fPeVA==", "comment"=>{"content"=>"evolution at its finest"}, "commit"=>"Create Comment", "roast_id"=>"4"}
+  [1m[36mRoast Load (0.5ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Unpermitted parameter: content
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (6.8ms)[0m  [1m[32mINSERT INTO "comments" ("roast_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["roast_id", 4], ["created_at", 2017-02-12 04:58:14 UTC], ["updated_at", 2017-02-12 04:58:14 UTC]]
+  [1m[35m (11.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (6.2ms)[0m  [1m[33mUPDATE "comments" SET "user_id" = $1, "updated_at" = $2 WHERE "comments"."id" = $3[0m  [["user_id", 1], ["updated_at", 2017-02-12 04:58:14 UTC], ["id", 5]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/roasts/4
+Completed 302 Found in 262ms (ActiveRecord: 77.6ms)
+
+
+Started GET "/roasts/4" for 127.0.0.1 at 2017-02-11 23:58:14 -0500
+Processing by RoastsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (7.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRoast Load (0.4ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering roasts/show.html.erb within layouts/application
+  [1m[36mComment Load (72.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."roast_id" = 4 ORDER BY created_at DESC[0m
+  Rendered comments/_comment.html.erb (1999.6ms)
+  Rendered roasts/show.html.erb within layouts/application (2006.8ms)
+Completed 500 Internal Server Error in 2056ms (ActiveRecord: 80.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `comment' for #<#<Class:0x007fe43f049040>:0x007fe43de13ab0>
+Did you mean?  @comments):
+    1: <% @comments.each do %>
+    2: 
+    3: <p><%= comment.content %></p>
+    4: 
+    5: <% end %>
+    6: 
+  
+app/views/comments/_comment.html.erb:3:in `block in _app_views_comments__comment_html_erb___2794994362099136350_70309133569160'
+app/views/comments/_comment.html.erb:1:in `_app_views_comments__comment_html_erb___2794994362099136350_70309133569160'
+app/views/roasts/show.html.erb:12:in `_app_views_roasts_show_html_erb__3247853499133564158_70309143268520'
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (16.5ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (123.6ms)
+Started GET "/roasts/4" for 127.0.0.1 at 2017-02-11 23:58:35 -0500
+Processing by RoastsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (18.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRoast Load (6.4ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering roasts/show.html.erb within layouts/application
+  [1m[36mComment Load (36.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."roast_id" = 4 ORDER BY created_at DESC[0m
+  Rendered comments/_comment.html.erb (53.6ms)
+  Rendered roasts/show.html.erb within layouts/application (61.5ms)
+Completed 500 Internal Server Error in 505ms (ActiveRecord: 61.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `content' for nil:NilClass):
+    1: <% @comments.each do %>
+    2: 
+    3: <p><%= @comment.content %></p>
+    4: 
+    5: <% end %>
+    6: 
+  
+app/views/comments/_comment.html.erb:3:in `block in _app_views_comments__comment_html_erb___2794994362099136350_70309147031560'
+app/views/comments/_comment.html.erb:1:in `_app_views_comments__comment_html_erb___2794994362099136350_70309147031560'
+app/views/roasts/show.html.erb:12:in `_app_views_roasts_show_html_erb__3247853499133564158_70309147044220'
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (16.2ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.2ms)
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (134.1ms)
+Started GET "/roasts" for 127.0.0.1 at 2017-02-11 23:58:48 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (7.1ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 72ms (Views: 57.0ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/roasts/4" for 127.0.0.1 at 2017-02-11 23:58:51 -0500
+Processing by RoastsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRoast Load (1.5ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering roasts/show.html.erb within layouts/application
+  [1m[36mComment Load (40.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."roast_id" = 4 ORDER BY created_at DESC[0m
+  Rendered comments/_comment.html.erb (68.5ms)
+  Rendered roasts/show.html.erb within layouts/application (91.0ms)
+Completed 500 Internal Server Error in 141ms (ActiveRecord: 44.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `content' for nil:NilClass):
+    1: <% @comments.each do %>
+    2: 
+    3: <p><%= @comment.content %></p>
+    4: 
+    5: <% end %>
+    6: 
+  
+app/views/comments/_comment.html.erb:3:in `block in _app_views_comments__comment_html_erb___2794994362099136350_70309149489840'
+app/views/comments/_comment.html.erb:1:in `_app_views_comments__comment_html_erb___2794994362099136350_70309149489840'
+app/views/roasts/show.html.erb:12:in `_app_views_roasts_show_html_erb__3247853499133564158_70309125910100'
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (31.8ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (155.4ms)
+Started GET "/roasts/4" for 127.0.0.1 at 2017-02-11 23:59:59 -0500
+Processing by RoastsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (11.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRoast Load (0.5ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering roasts/show.html.erb within layouts/application
+  [1m[36mComment Load (40.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."roast_id" = 4 ORDER BY created_at DESC[0m
+  Rendered comments/_form.html.erb (28.2ms)
+  Rendered comments/_comment.html.erb (75.0ms)
+  Rendered roasts/show.html.erb within layouts/application (90.2ms)
+Completed 200 OK in 204ms (Views: 116.7ms | ActiveRecord: 52.5ms)
+
+
+Started POST "/roasts/4/comments" for 127.0.0.1 at 2017-02-12 00:00:07 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y2kIhGJUpT0FRMigTZk81VJHzzznGpnAItUMleSpNdZyJbE0bHw8TDqQH6h5mND1CPMIIO1GaJrYle3T9fs30Q==", "comment"=>{"content"=>"evolution at its finest"}, "commit"=>"Create Comment", "roast_id"=>"4"}
+  [1m[36mRoast Load (1.3ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Unpermitted parameter: content
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "comments" ("roast_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["roast_id", 4], ["created_at", 2017-02-12 05:00:07 UTC], ["updated_at", 2017-02-12 05:00:07 UTC]]
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "comments" SET "user_id" = $1, "updated_at" = $2 WHERE "comments"."id" = $3[0m  [["user_id", 1], ["updated_at", 2017-02-12 05:00:07 UTC], ["id", 6]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/roasts/4
+Completed 302 Found in 40ms (ActiveRecord: 17.1ms)
+
+
+Started GET "/roasts/4" for 127.0.0.1 at 2017-02-12 00:00:07 -0500
+Processing by RoastsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRoast Load (0.3ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering roasts/show.html.erb within layouts/application
+  [1m[36mComment Load (5.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."roast_id" = 4 ORDER BY created_at DESC[0m
+  Rendered comments/_form.html.erb (13.2ms)
+  Rendered comments/_comment.html.erb (25.9ms)
+  Rendered roasts/show.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 75ms (Views: 63.0ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 00:00:13 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.5ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 58ms (Views: 34.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/roasts/4" for 127.0.0.1 at 2017-02-12 00:00:16 -0500
+Processing by RoastsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRoast Load (0.4ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering roasts/show.html.erb within layouts/application
+  [1m[36mComment Load (27.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."roast_id" = 4 ORDER BY created_at DESC[0m
+  Rendered comments/_form.html.erb (12.1ms)
+  Rendered comments/_comment.html.erb (43.6ms)
+  Rendered roasts/show.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 89ms (Views: 54.6ms | ActiveRecord: 28.6ms)
+
+

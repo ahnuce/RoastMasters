@@ -11,6 +11,7 @@ class RoastsController < ApplicationController
   # GET /roasts/1
   # GET /roasts/1.json
   def show
+    @comments = Comment.where(roast_id: @roast).order("created_at DESC")
   end
 
   # GET /roasts/new

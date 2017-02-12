@@ -1,4 +1,5 @@
 class Roast < ApplicationRecord
   belongs_to :user
-  belongs_to :roast_image
+  has_many :comments
+
 end
