@@ -14,4 +14,11 @@
     </button>
     <% end %>
   </p>
+  <p>
+    <%= link_to unlike_comment_path(comment), class:"like", method: :put do %>
+    <button type="button" class="btn btn-info" aria-label="left Align"><spanclass="glyphicon glyphicon-thumbs-down glyphicon-align-center" aria-hidden="false"></span>
+      <span class="badge"><%= comment.get_downvotes.size %></span>
+    </button>
+    <% end %>
+  </p>
 </div>

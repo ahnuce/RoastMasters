@@ -24,14 +24,18 @@ class CommentsController < ApplicationController
     @comment.upvote_from current_user
   redirect_to request.referrer
   end
+  def downvote
+    @comment.downvote_from current_user
+  redirect_to request.referrer
+  end
+end
 
 
 
 private
 def set_comment
-  @comment = Comment.find(params[:id])
+@comment = Comment.find(params[:id])
 end
 def comment_params
   params.require(:comment).permit(:body)
-end
 end
