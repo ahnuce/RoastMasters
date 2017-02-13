@@ -10,16 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170211042843) do
+ActiveRecord::Schema.define(version: 20170213003553) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "roast_images", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "img_url"
-    t.string   "name"
+  create_table "comments", force: :cascade do |t|
+    t.text     "body"
+    t.integer  "roast_id"
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
+    t.integer  "cached_votes_total",      default: 0
+    t.integer  "cached_votes_score",      default: 0
+    t.integer  "cached_votes_up",         default: 0
+    t.integer  "cached_votes_down",       default: 0
+    t.integer  "cached_weighted_score",   default: 0
+    t.integer  "cached_weighted_total",   default: 0
+    t.float    "cached_weighted_average", default: 0.0
+    t.index ["cached_votes_down"], name: "index_comments_on_cached_votes_down", using: :btree
+    t.index ["cached_votes_score"], name: "index_comments_on_cached_votes_score", using: :btree
+    t.index ["cached_votes_total"], name: "index_comments_on_cached_votes_total", using: :btree
+    t.index ["cached_votes_up"], name: "index_comments_on_cached_votes_up", using: :btree
+    t.index ["cached_weighted_average"], name: "index_comments_on_cached_weighted_average", using: :btree
+    t.index ["cached_weighted_score"], name: "index_comments_on_cached_weighted_score", using: :btree
+    t.index ["cached_weighted_total"], name: "index_comments_on_cached_weighted_total", using: :btree
+    t.index ["roast_id"], name: "index_comments_on_roast_id", using: :btree
   end
 
   create_table "roasts", force: :cascade do |t|
@@ -52,12 +67,26 @@ ActiveRecord::Schema.define(version: 20170211042843) do
     t.datetime "updated_at",                          null: false
     t.string   "image"
     t.string   "avatar_file_name"
-    t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  create_table "votes", force: :cascade do |t|
+    t.string   "votable_type"
+    t.integer  "votable_id"
+    t.string   "voter_type"
+    t.integer  "voter_id"
+    t.boolean  "vote_flag"
+    t.string   "vote_scope"
+    t.integer  "vote_weight"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["votable_id", "votable_type", "vote_scope"], name: "index_votes_on_votable_id_and_votable_type_and_vote_scope", using: :btree
+    t.index ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope", using: :btree
+  end
+
+  add_foreign_key "comments", "roasts"
   add_foreign_key "roasts", "users"
 end

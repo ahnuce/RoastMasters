@@ -4,6 +4,7 @@
     <title>RoastMaster</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag "application" %>
       <script
       src="https://code.jquery.com/jquery-2.2.4.min.js"
       integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
@@ -18,19 +19,13 @@
   </head>
 
   <body>
-    <% if user_signed_in? %>
-      <li>
-      <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-      </li>
-    <% else %>
-      <li>
-      <%= link_to('Login', new_user_session_path)  %>
-      </li>
-    <% end %>
 
 
-
+<div class="container-fluid">
     <%= yield %>
+</div>
+
+
 </div>
   </body>
 </html>
