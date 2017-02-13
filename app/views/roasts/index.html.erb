@@ -2,18 +2,21 @@
 
     <% @roasts.each do |roast| %>
     <%= link_to roast do %>
+
 <div class="col-sm-6 col-md-4">
   <div class="thumbnail thumb-box">
+    <div class="imageDiv">
     <h2 style="text-align:center;">
       <%= roast.body %>
     </h2>
 
-    <%= image_tag(roast.image, size: "250x300" ) %>
+    <%= image_tag(roast.image, :class => "indexImage") %>
 
     <div class="caption" style="text-align:center;">
 
     </div>
   </div>
+</div>
 </div>
 <% end %>
 <% end %>

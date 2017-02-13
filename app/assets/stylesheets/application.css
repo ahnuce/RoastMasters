@@ -8,10 +8,30 @@ tr {
 .like {
   text-decoration: none;
 }
-.index_image {
-  width: 150px;
-  height: 150px;
+.indexImage {
+width: 100%;
+height: 300px;
+
 }
+body {
+  overflow: hidden;
+}
+
+#comments  {
+  overflow-y: auto;
+  height: 700px;
+}
+.showImage {
+  width:150px;
+  height: auto;
+  display: inline-flex;
+  float: left;
+}
+.comments {
+  display: inline-flex;
+  float: right;
+}
+
 .user_email{
   padding-top: 16px;
   padding-left: 20px;
