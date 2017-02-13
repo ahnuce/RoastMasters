@@ -36828,3 +36828,1808 @@ Processing by CommentsController#index as HTML
 Completed 200 OK in 533ms (Views: 278.8ms | ActiveRecord: 201.5ms)
 
 
+Started GET "/roasts/4/comments" for 127.0.0.1 at 2017-02-12 22:22:57 -0500
+Processing by CommentsController#index as HTML
+  Parameters: {"roast_id"=>"4"}
+  [1m[36mUser Load (47.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  [1m[36mComment Load (40.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" ORDER BY "comments"."cached_votes_up" DESC[0m
+  [1m[36mRoast Load (14.9ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (62.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 7], ["votable_type", "Comment"], ["vote_flag", true]]
+  [1m[36mRoast Load (20.8ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 8], ["votable_type", "Comment"], ["vote_flag", true]]
+  [1m[36mRoast Load (0.5ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 9], ["votable_type", "Comment"], ["vote_flag", true]]
+  [1m[36mRoast Load (27.3ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 10], ["votable_type", "Comment"], ["vote_flag", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 11], ["votable_type", "Comment"], ["vote_flag", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 12], ["votable_type", "Comment"], ["vote_flag", true]]
+  Rendered collection of comments/_comment.html.erb [6 times] (1036.8ms)
+  Rendered comments/index.html.erb within layouts/application (1216.7ms)
+Completed 200 OK in 3358ms (Views: 2675.7ms | ActiveRecord: 217.3ms)
+
+
+Started GET "/roasts/4/comments" for 127.0.0.1 at 2017-02-12 22:24:13 -0500
+Processing by CommentsController#index as HTML
+  Parameters: {"roast_id"=>"4"}
+  [1m[36mUser Load (82.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  [1m[36mComment Load (26.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" ORDER BY "comments"."cached_votes_up" DESC[0m
+  [1m[36mRoast Load (3.8ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (71.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 7], ["votable_type", "Comment"], ["vote_flag", true]]
+  [1m[36mRoast Load (15.8ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 8], ["votable_type", "Comment"], ["vote_flag", true]]
+  [1m[36mRoast Load (0.5ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 9], ["votable_type", "Comment"], ["vote_flag", true]]
+  [1m[36mRoast Load (0.6ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 10], ["votable_type", "Comment"], ["vote_flag", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (17.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 11], ["votable_type", "Comment"], ["vote_flag", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 12], ["votable_type", "Comment"], ["vote_flag", true]]
+  Rendered collection of comments/_comment.html.erb [6 times] (894.8ms)
+  Rendered comments/index.html.erb within layouts/application (1021.5ms)
+Completed 200 OK in 2376ms (Views: 2037.5ms | ActiveRecord: 221.1ms)
+
+
+Started GET "/roasts/4/comments" for 127.0.0.1 at 2017-02-12 22:26:28 -0500
+Processing by CommentsController#index as HTML
+  Parameters: {"roast_id"=>"4"}
+  [1m[36mUser Load (109.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  [1m[36mComment Load (87.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" ORDER BY "comments"."cached_votes_up" DESC[0m
+  [1m[36mRoast Load (0.8ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (21.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 7], ["votable_type", "Comment"], ["vote_flag", true]]
+  [1m[36mRoast Load (3.2ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 8], ["votable_type", "Comment"], ["vote_flag", true]]
+  [1m[36mRoast Load (12.4ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 9], ["votable_type", "Comment"], ["vote_flag", true]]
+  [1m[36mRoast Load (0.5ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 10], ["votable_type", "Comment"], ["vote_flag", true]]
+  [1m[36mCACHE (0.2ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (6.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 11], ["votable_type", "Comment"], ["vote_flag", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (7.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 12], ["votable_type", "Comment"], ["vote_flag", true]]
+  Rendered collection of comments/_comment.html.erb [6 times] (846.1ms)
+  Rendered comments/index.html.erb within layouts/application (1030.0ms)
+Completed 200 OK in 2366ms (Views: 1988.8ms | ActiveRecord: 252.0ms)
+
+
+Started GET "/roasts/4/comments" for 127.0.0.1 at 2017-02-12 22:26:44 -0500
+Processing by CommentsController#index as HTML
+  Parameters: {"roast_id"=>"4"}
+  [1m[36mUser Load (58.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  [1m[36mComment Load (12.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" ORDER BY "comments"."cached_votes_up" DESC[0m
+  [1m[36mRoast Load (0.7ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 7], ["votable_type", "Comment"], ["vote_flag", true]]
+  [1m[36mRoast Load (13.7ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 8], ["votable_type", "Comment"], ["vote_flag", true]]
+  [1m[36mRoast Load (0.8ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (13.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 9], ["votable_type", "Comment"], ["vote_flag", true]]
+  [1m[36mRoast Load (1.9ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 10], ["votable_type", "Comment"], ["vote_flag", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (14.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 11], ["votable_type", "Comment"], ["vote_flag", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 12], ["votable_type", "Comment"], ["vote_flag", true]]
+  Rendered collection of comments/_comment.html.erb [6 times] (703.2ms)
+  Rendered comments/index.html.erb within layouts/application (743.7ms)
+Completed 200 OK in 1408ms (Views: 1184.1ms | ActiveRecord: 118.2ms)
+
+
+Started GET "/roasts/4/comments" for 127.0.0.1 at 2017-02-12 22:29:02 -0500
+Processing by CommentsController#index as HTML
+  Parameters: {"roast_id"=>"4"}
+  [1m[36mUser Load (47.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering comments/index.html.erb within layouts/application
+  [1m[36mComment Load (29.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" ORDER BY "comments"."cached_votes_up" DESC[0m
+  [1m[36mRoast Load (13.2ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 7], ["votable_type", "Comment"], ["vote_flag", true]]
+  [1m[36mRoast Load (7.0ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 8], ["votable_type", "Comment"], ["vote_flag", true]]
+  [1m[36mRoast Load (0.6ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 9], ["votable_type", "Comment"], ["vote_flag", true]]
+  [1m[36mRoast Load (0.6ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 10], ["votable_type", "Comment"], ["vote_flag", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (7.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 11], ["votable_type", "Comment"], ["vote_flag", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 12], ["votable_type", "Comment"], ["vote_flag", true]]
+  Rendered collection of comments/_comment.html.erb [6 times] (944.8ms)
+  Rendered comments/index.html.erb within layouts/application (1156.2ms)
+Completed 200 OK in 2126ms (Views: 1927.4ms | ActiveRecord: 108.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-12 22:29:08 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (25.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/roasts
+Completed 302 Found in 59ms (ActiveRecord: 25.4ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:29:08 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (7.3ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (33.2ms)
+Completed 200 OK in 397ms (Views: 338.6ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/roasts/4comments" for 127.0.0.1 at 2017-02-12 22:29:15 -0500
+Processing by RoastsController#show as HTML
+  Parameters: {"id"=>"4comments"}
+  [1m[36mUser Load (78.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRoast Load (0.5ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering roasts/show.html.erb within layouts/application
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."roast_id" = $1[0m  [["roast_id", 4]]
+  [1m[36mComment Load (1.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."roast_id" = $1[0m  [["roast_id", 4]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 7], ["votable_type", "Comment"], ["vote_flag", true]]
+  [1m[35m (13.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 11], ["votable_type", "Comment"], ["vote_flag", true]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 12], ["votable_type", "Comment"], ["vote_flag", true]]
+  Rendered collection of comments/_comment.html.erb [3 times] (173.0ms)
+  Rendered comments/_form.html.erb (37.3ms)
+  Rendered roasts/show.html.erb within layouts/application (283.2ms)
+Completed 200 OK in 720ms (Views: 603.5ms | ActiveRecord: 97.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-12 22:29:17 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (13.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/roasts
+Completed 302 Found in 23ms (ActiveRecord: 13.2ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:29:17 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.7ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 335ms (Views: 321.6ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-12 22:29:22 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (25.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/roasts
+Completed 302 Found in 82ms (ActiveRecord: 25.2ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:29:22 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (7.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (10.3ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (48.8ms)
+Completed 200 OK in 363ms (Views: 333.9ms | ActiveRecord: 18.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-12 22:29:25 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (9.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/roasts
+Completed 302 Found in 52ms (ActiveRecord: 9.8ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:29:25 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.8ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (26.5ms)
+Completed 200 OK in 536ms (Views: 522.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:30:47 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (6.7ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (53.8ms)
+Completed 200 OK in 804ms (Views: 756.1ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/%3Ca%20href=" for 127.0.0.1 at 2017-02-12 22:30:50 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/%3Ca%20href="):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered collection of /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [52 times] (174.3ms)
+  Rendered collection of /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [10 times] (14.5ms)
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.1ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (424.7ms)
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:30:57 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.9ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (24.6ms)
+Completed 200 OK in 213ms (Views: 169.0ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:31:12 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (5.8ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (34.1ms)
+Completed 200 OK in 550ms (Views: 429.3ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-12 22:31:15 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (20.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/roasts
+Completed 302 Found in 28ms (ActiveRecord: 20.1ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:31:15 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (25.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (11.1ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 377ms (Views: 323.0ms | ActiveRecord: 36.9ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:32:08 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (28.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.7ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (47.4ms)
+Completed 200 OK in 662ms (Views: 575.8ms | ActiveRecord: 28.7ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-02-12 22:32:50 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NS8kapQtwa+4Q7S6BbAGunUuPHrEqB4BC1XVTkrcX2LKiwnTMX8yEalu520qoC8hpAYSTG99nvfxNCFMb887Aw=="}
+  [1m[36mUser Load (28.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (10.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 159ms (ActiveRecord: 38.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-12 22:32:50 -0500
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-02-12 22:32:50 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 290ms (Views: 281.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-02-12 22:32:59 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YBTyJ2uUunilPKY+Wecj1E2juV3mCRuvUW0I8YzRSpmK2BDcesL7NOtp4PvS+dsEiBFq6rnBVWsqoT1OZCmTXA==", "user"=>{"email"=>"ahnuce@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (118.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "ahnuce@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (31.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", 2017-02-13 03:33:00 UTC], ["last_sign_in_at", 2017-02-11 21:03:58 UTC], ["sign_in_count", 19], ["updated_at", 2017-02-13 03:33:00 UTC], ["id", 1]]
+  [1m[35m (21.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 440ms (ActiveRecord: 171.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-12 22:33:00 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (14.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/roasts
+Completed 302 Found in 21ms (ActiveRecord: 14.8ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:33:00 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (12.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (42.8ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (66.7ms)
+Completed 200 OK in 251ms (Views: 183.9ms | ActiveRecord: 55.6ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-02-12 22:33:04 -0500
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (7.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 22ms (ActiveRecord: 7.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-02-12 22:33:06 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0eRght8VLSFYGrq7HNuzExG+pk/dKDxU7RnyAFc8xZD3BTMZ5oxEHaZEM3gcUVIYRYLurTBRJnVC6Bdo5yLgGw=="}
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 80ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-12 22:33:06 -0500
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-02-12 22:33:06 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 273ms (Views: 270.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-12 22:33:09 -0500
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-02-12 22:33:09 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (4.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 144ms (Views: 141.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-12 22:33:10 -0500
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-02-12 22:33:10 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (4.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 138ms (Views: 133.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-12 22:33:12 -0500
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-02-12 22:33:12 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (16.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (31.5ms)
+Completed 200 OK in 252ms (Views: 244.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-12 22:33:14 -0500
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-02-12 22:33:14 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (4.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 269ms (Views: 267.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-12 22:34:12 -0500
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 13ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-02-12 22:34:12 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (9.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (35.8ms)
+Completed 200 OK in 345ms (Views: 333.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-12 22:34:16 -0500
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-02-12 22:34:16 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (10.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 274ms (Views: 267.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-02-12 22:34:19 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/lIL7pQptzhH5PuGGu9F0RUo/xRcKGjpqLnluzE2HsrAWTCUQ71TPPsLwdhXzIhXNBDxdBMa7RFbFJW/pEWmTA==", "user"=>{"email"=>"ahnuce@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (39.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "ahnuce@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (26.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", 2017-02-13 03:34:19 UTC], ["last_sign_in_at", 2017-02-13 03:33:00 UTC], ["sign_in_count", 20], ["updated_at", 2017-02-13 03:34:19 UTC], ["id", 1]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 295ms (ActiveRecord: 68.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-12 22:34:19 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (7.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/roasts
+Completed 302 Found in 14ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:34:19 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (5.1ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 164ms (Views: 142.4ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:35:22 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (23.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.9ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 384ms (Views: 309.9ms | ActiveRecord: 24.0ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:35:48 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (9.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (8.6ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (51.4ms)
+Completed 200 OK in 356ms (Views: 288.4ms | ActiveRecord: 17.7ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:36:44 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (3.5ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (26.5ms)
+Completed 200 OK in 404ms (Views: 344.8ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:37:04 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (1.8ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 312ms (Views: 288.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:37:39 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.9ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 477ms (Views: 393.5ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:37:53 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (12.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (6.1ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (25.6ms)
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 18.9ms)
+
+
+  
+SyntaxError (/Users/generalassembly/wdi/RoastMasters/app/views/layouts/application.html.erb:63: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/layouts/application.html.erb:63: syntax error, unexpected keyword_ensure, expecting end-of-input
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (82.7ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.2ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.0ms)
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (244.4ms)
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:38:03 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (6.4ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 217ms (Views: 199.0ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:39:14 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (12.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (7.2ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (36.7ms)
+Completed 500 Internal Server Error in 529ms (ActiveRecord: 19.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `upcase=' for "ahnuce@gmail.com":String
+Did you mean?  upcase
+               upcase!):
+    28:         <ul class="nav navbar-nav">
+    29:           <li class="active">  <%= link_to "Home", root_path %></li>
+    30:           <li><% if user_signed_in? %>
+    31:     <%= current_user.email.upcase,id="user_email" %>
+    32:   </li>
+    33:   <li>   <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+    34:       </li>
+  
+app/views/layouts/application.html.erb:31:in `_app_views_layouts_application_html_erb___816005362319089333_70172604708300'
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (44.3ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (210.1ms)
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:41:00 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (11.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.7ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (17.9ms)
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 12.3ms)
+
+
+  
+SyntaxError (/Users/generalassembly/wdi/RoastMasters/app/views/layouts/application.html.erb:31: syntax error, unexpected =>
+...rent_user.email.upcase,{class=>"user_email"} );@output_buffe...
+...                               ^
+/Users/generalassembly/wdi/RoastMasters/app/views/layouts/application.html.erb:31: syntax error, unexpected '}', expecting ')'
+...il.upcase,{class=>"user_email"} );@output_buffer.safe_append...
+...                               ^
+/Users/generalassembly/wdi/RoastMasters/app/views/layouts/application.html.erb:36: syntax error, unexpected keyword_else, expecting ')'
+'.freeze;     else 
+                  ^
+/Users/generalassembly/wdi/RoastMasters/app/views/layouts/application.html.erb:40: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/Users/generalassembly/wdi/RoastMasters/app/views/layouts/application.html.erb:63: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/generalassembly/wdi/RoastMasters/app/views/layouts/application.html.erb:65: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/layouts/application.html.erb:31: syntax error, unexpected =>
+app/views/layouts/application.html.erb:31: syntax error, unexpected '}', expecting ')'
+app/views/layouts/application.html.erb:36: syntax error, unexpected keyword_else, expecting ')'
+app/views/layouts/application.html.erb:40: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/application.html.erb:63: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/layouts/application.html.erb:65: syntax error, unexpected keyword_end, expecting ')'
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (31.8ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.3ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (168.9ms)
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:41:09 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.7ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (8.3ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 1.7ms)
+
+
+  
+SyntaxError (/Users/generalassembly/wdi/RoastMasters/app/views/layouts/application.html.erb:31: syntax error, unexpected '='
+...rrent_user.email.upcase,{class="user_email"} );@output_buffe...
+...                               ^
+/Users/generalassembly/wdi/RoastMasters/app/views/layouts/application.html.erb:31: syntax error, unexpected '}', expecting ')'
+...ail.upcase,{class="user_email"} );@output_buffer.safe_append...
+...                               ^
+/Users/generalassembly/wdi/RoastMasters/app/views/layouts/application.html.erb:36: syntax error, unexpected keyword_else, expecting ')'
+'.freeze;     else 
+                  ^
+/Users/generalassembly/wdi/RoastMasters/app/views/layouts/application.html.erb:40: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/Users/generalassembly/wdi/RoastMasters/app/views/layouts/application.html.erb:63: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/generalassembly/wdi/RoastMasters/app/views/layouts/application.html.erb:65: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/layouts/application.html.erb:31: syntax error, unexpected '='
+app/views/layouts/application.html.erb:31: syntax error, unexpected '}', expecting ')'
+app/views/layouts/application.html.erb:36: syntax error, unexpected keyword_else, expecting ')'
+app/views/layouts/application.html.erb:40: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/application.html.erb:63: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/layouts/application.html.erb:65: syntax error, unexpected keyword_end, expecting ')'
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (32.0ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.6ms)
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (156.9ms)
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:42:02 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (7.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.5ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (15.6ms)
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 8.0ms)
+
+
+  
+SyntaxError (/Users/generalassembly/wdi/RoastMasters/app/views/layouts/application.html.erb:31: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+...se,{ :class => "user_email" } );@output_buffer.safe_append='
+...                               ^
+/Users/generalassembly/wdi/RoastMasters/app/views/layouts/application.html.erb:36: syntax error, unexpected keyword_else, expecting ')'
+'.freeze;     else 
+                  ^
+/Users/generalassembly/wdi/RoastMasters/app/views/layouts/application.html.erb:40: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/Users/generalassembly/wdi/RoastMasters/app/views/layouts/application.html.erb:63: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/generalassembly/wdi/RoastMasters/app/views/layouts/application.html.erb:65: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/layouts/application.html.erb:31: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+app/views/layouts/application.html.erb:36: syntax error, unexpected keyword_else, expecting ')'
+app/views/layouts/application.html.erb:40: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/application.html.erb:63: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/layouts/application.html.erb:65: syntax error, unexpected keyword_end, expecting ')'
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (14.5ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.0ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (163.2ms)
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:42:48 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.6ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (14.2ms)
+Completed 500 Internal Server Error in 90ms (ActiveRecord: 4.8ms)
+
+
+  
+SyntaxError (/Users/generalassembly/wdi/RoastMasters/app/views/layouts/application.html.erb:30: syntax error, unexpected ',', expecting keyword_then or ';' or '\n'
+...i>'.freeze; if user_signed_in?, ,{ :class => "user_email" } ...
+...                               ^
+/Users/generalassembly/wdi/RoastMasters/app/views/layouts/application.html.erb:63: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/layouts/application.html.erb:30: syntax error, unexpected ',', expecting keyword_then or ';' or '\n'
+app/views/layouts/application.html.erb:63: syntax error, unexpected keyword_ensure, expecting end-of-input
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (31.2ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.5ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (151.5ms)
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:43:08 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (8.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.7ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 9.6ms)
+
+
+  
+SyntaxError (/Users/generalassembly/wdi/RoastMasters/app/views/layouts/application.html.erb:30: syntax error, unexpected ',', expecting keyword_then or ';' or '\n'
+...i>'.freeze; if user_signed_in?, { :class => "user_email" } ;...
+...                               ^
+/Users/generalassembly/wdi/RoastMasters/app/views/layouts/application.html.erb:63: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/layouts/application.html.erb:30: syntax error, unexpected ',', expecting keyword_then or ';' or '\n'
+app/views/layouts/application.html.erb:63: syntax error, unexpected keyword_ensure, expecting end-of-input
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.2ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (125.6ms)
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:44:03 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (3.7ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 333ms (Views: 285.1ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:44:39 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (15.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.6ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 302ms (Views: 228.1ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:44:52 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.6ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 186ms (Views: 172.6ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:45:35 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (22.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (7.1ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (30.5ms)
+Completed 200 OK in 324ms (Views: 239.2ms | ActiveRecord: 30.0ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:46:06 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.9ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 164ms (Views: 135.8ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:46:15 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.8ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 137ms (Views: 126.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:46:32 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (15.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.6ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 229ms (Views: 173.9ms | ActiveRecord: 16.3ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:46:49 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.8ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 159ms (Views: 142.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:47:20 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (10.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (6.7ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 273ms (Views: 242.9ms | ActiveRecord: 17.3ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:47:29 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.9ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 145ms (Views: 132.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:47:45 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.6ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 190ms (Views: 175.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:47:56 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (19.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.6ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 148ms (Views: 118.7ms | ActiveRecord: 19.8ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:48:04 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (1.8ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 142ms (Views: 127.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:48:12 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.5ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 106ms (Views: 92.2ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:48:36 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (13.6ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 309ms (Views: 284.7ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:48:57 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (8.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.5ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 208ms (Views: 188.7ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:49:04 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.7ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 161ms (Views: 149.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:49:23 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (17.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.6ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 172ms (Views: 145.6ms | ActiveRecord: 17.6ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:49:41 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (8.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.7ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 185ms (Views: 142.2ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:50:27 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.8ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 290ms (Views: 240.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:50:34 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (12.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (2.3ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 122ms (Views: 98.3ms | ActiveRecord: 14.6ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:51:15 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.6ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 242ms (Views: 204.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:52:21 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (1.3ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 298ms (Views: 240.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:52:33 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (18.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.7ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 191ms (Views: 158.5ms | ActiveRecord: 19.3ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:52:36 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (13.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.8ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 95ms (Views: 74.9ms | ActiveRecord: 14.1ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:53:28 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.9ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 293ms (Views: 240.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:53:34 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (19.9ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (25.3ms)
+Completed 200 OK in 170ms (Views: 135.9ms | ActiveRecord: 24.0ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:53:57 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.7ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 233ms (Views: 188.8ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:54:51 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.8ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 260ms (Views: 221.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:55:04 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (15.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (6.7ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 161ms (Views: 128.3ms | ActiveRecord: 22.3ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:55:27 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (1.3ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 118ms (Views: 107.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:55:36 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.6ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 108ms (Views: 96.2ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:55:43 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (3.9ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 136ms (Views: 117.2ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:56:03 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (28.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (3.3ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 140ms (Views: 99.9ms | ActiveRecord: 31.3ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:57:31 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.7ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 275ms (Views: 244.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:57:50 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (2.3ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 218ms (Views: 200.8ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:57:59 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (12.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.9ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 224ms (Views: 202.5ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:58:07 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (26.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (1.0ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 251ms (Views: 171.4ms | ActiveRecord: 27.2ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:58:39 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (14.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.7ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 220ms (Views: 193.0ms | ActiveRecord: 15.5ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:59:22 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (21.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (0.8ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (29.7ms)
+Completed 200 OK in 403ms (Views: 261.3ms | ActiveRecord: 22.4ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:59:35 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (20.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (10.1ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 207ms (Views: 168.2ms | ActiveRecord: 30.7ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:59:40 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (14.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (1.6ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 186ms (Views: 159.4ms | ActiveRecord: 16.3ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:59:49 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (20.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (6.3ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (30.8ms)
+Completed 200 OK in 555ms (Views: 491.1ms | ActiveRecord: 27.2ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 22:59:58 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (15.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  [1m[36mRoast Load (6.8ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 226ms (Views: 193.2ms | ActiveRecord: 21.9ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-02-12 23:00:08 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"k8aWhPlwCPyo+OV/oLd/WzM1tiJuqgwyD/ye0ng7Z6RTJ7zdg7CzyML7bedpk4rdNSVMcj7pUe42MdNf+SrLaA=="}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 27ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-12 23:00:08 -0500
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-02-12 23:00:08 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (24.6ms)
+Completed 200 OK in 132ms (Views: 122.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-12 23:00:12 -0500
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-02-12 23:00:12 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 101ms (Views: 98.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-02-12 23:00:14 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 117ms (Views: 113.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-02-12 23:03:40 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (7.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (47.8ms)
+Completed 200 OK in 349ms (Views: 305.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-02-12 23:03:42 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z9xDIj8Iv56y8N2l/lJvSKCqhPpkz8GSx7WjbJkWxtNEBnaAUqJr6PX5i9yEvzLD4ZifX/fq9o3PQR/OV8irLg==", "user"=>{"email"=>"ahnuce@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (25.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "ahnuce@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (9.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", 2017-02-13 04:03:43 UTC], ["last_sign_in_at", 2017-02-13 03:34:19 UTC], ["sign_in_count", 21], ["updated_at", 2017-02-13 04:03:43 UTC], ["id", 1]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 275ms (ActiveRecord: 37.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-12 23:03:43 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/roasts
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 23:03:43 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (5.4ms)
+  [1m[36mRoast Load (0.7ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 304ms (Views: 297.2ms | ActiveRecord: 1.8ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-02-12 23:04:20 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"eaW6vzzbAie87MAEOfoIWbQ4QEYzWAeTEGatwPYHEfCYXuF29qbg7V5+uFVJ5g1ZEhJ4h4INRU3AupVMOyI/hw=="}
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-02-12 23:04:20 -0500
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"eaW6vzzbAie87MAEOfoIWbQ4QEYzWAeTEGatwPYHEfCYXuF29qbg7V5+uFVJ5g1ZEhJ4h4INRU3AupVMOyI/hw=="}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 59ms (ActiveRecord: 2.2ms)
+
+
+  [1m[36mUser Load (15.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (18.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 48ms (ActiveRecord: 34.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-12 23:04:20 -0500
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-02-12 23:04:20 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (15.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (39.3ms)
+Completed 200 OK in 265ms (Views: 261.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-02-12 23:04:23 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YBko5In78139A27QwwefbEUP2SWWra0L7fZAATbd3dCM9W3o/9sGZxnKknmu5Qs+umGxyxL+aFMAvkpQLCHFJw==", "user"=>{"email"=>"ahnuce@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "ahnuce@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (12.1ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", 2017-02-13 04:04:23 UTC], ["last_sign_in_at", 2017-02-13 04:03:43 UTC], ["sign_in_count", 22], ["updated_at", 2017-02-13 04:04:23 UTC], ["id", 1]]
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 235ms (ActiveRecord: 18.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-12 23:04:23 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/roasts
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 23:04:23 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (7.4ms)
+  [1m[36mRoast Load (1.2ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (36.3ms)
+Completed 200 OK in 109ms (Views: 103.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 23:06:53 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (19.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (13.4ms)
+  [1m[36mRoast Load (1.3ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (38.9ms)
+Completed 200 OK in 398ms (Views: 306.9ms | ActiveRecord: 20.4ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 23:09:23 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (11.9ms)
+  [1m[36mRoast Load (3.9ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (1681.0ms)
+Completed 500 Internal Server Error in 1739ms (ActiveRecord: 5.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `width' for #<#<Class:0x007fa4b5cc5dd8>:0x007fa4b17e4ae8>):
+    20:   <tbody>
+    21:     <% @roasts.each do |roast| %>
+    22:       <tr>
+    23:         <td ><%= image_tag roast.image, :max-width => "150" %></td>
+    24:         <td><%= roast.body %></td>
+    25:         <td><%= link_to 'Show', roast %></td>
+    26: 
+  
+app/views/roasts/index.html.erb:23:in `block in _app_views_roasts_index_html_erb__3222452824600126089_70172664605500'
+app/views/roasts/index.html.erb:21:in `_app_views_roasts_index_html_erb__3222452824600126089_70172664605500'
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (125.0ms)
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 23:10:44 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  Rendered roasts/index.html.erb within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 1.2ms)
+
+
+  
+SyntaxError (/Users/generalassembly/wdi/RoastMasters/app/views/roasts/index.html.erb:23: syntax error, unexpected ':', expecting ')'
+...age_tag roast.image, max-width: 150 );@output_buffer.safe_ap...
+...                               ^):
+  
+app/views/roasts/index.html.erb:23: syntax error, unexpected ':', expecting ')'
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.9ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.7ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (116.5ms)
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 23:10:53 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (15.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (2.4ms)
+  [1m[36mRoast Load (0.9ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 208ms (Views: 183.1ms | ActiveRecord: 16.1ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 23:11:26 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (7.4ms)
+  [1m[36mRoast Load (3.1ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (700.2ms)
+Completed 500 Internal Server Error in 800ms (ActiveRecord: 5.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `fill' for #<#<Class:0x007fa4b5cc5dd8>:0x007fa4b7b22128>
+Did you mean?  fail):
+    20:   <tbody>
+    21:     <% @roasts.each do |roast| %>
+    22:       <tr>
+    23:         <td ><%= image_tag roast.image, width: 150, height: 150, crop: fill %></td>
+    24:         <td><%= roast.body %></td>
+    25:         <td><%= link_to 'Show', roast %></td>
+    26: 
+  
+app/views/roasts/index.html.erb:23:in `block in _app_views_roasts_index_html_erb__3222452824600126089_70172716635740'
+app/views/roasts/index.html.erb:21:in `_app_views_roasts_index_html_erb__3222452824600126089_70172716635740'
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.7ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (169.5ms)
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 23:11:35 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (1.1ms)
+  [1m[36mRoast Load (7.4ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 158ms (Views: 143.0ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 23:12:51 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (4.2ms)
+  [1m[36mRoast Load (0.5ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 549ms (Views: 513.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 23:13:47 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (7.3ms)
+  [1m[36mRoast Load (0.7ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (1100.0ms)
+Completed 500 Internal Server Error in 1197ms (ActiveRecord: 5.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `roast' for #<#<Class:0x007fa4b5cc5dd8>:0x007fa4ab7a97a0>
+Did you mean?  roast_url
+               @roasts):
+    11: <table>
+    12:   <thead>
+    13:     <tr>
+    14: <%= roast.body %></td>
+    15:       <th colspan="3"></th>
+    16:     </tr>
+    17:   </thead>
+  
+app/views/roasts/index.html.erb:14:in `_app_views_roasts_index_html_erb__3222452824600126089_70172614152420'
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.3ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (119.6ms)
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 23:14:05 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (8.4ms)
+  [1m[36mRoast Load (3.3ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (627.3ms)
+Completed 500 Internal Server Error in 716ms (ActiveRecord: 5.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `roast' for #<#<Class:0x007fa4b5cc5dd8>:0x007fa4b3697850>
+Did you mean?  roast_url
+               @roasts):
+    11: <table>
+    12:   <thead>
+    13:     <tr>
+    14:         <td><%= roast.body %></td>
+    15: 
+    16:       <th colspan="3"></th>
+    17:     </tr>
+  
+app/views/roasts/index.html.erb:14:in `_app_views_roasts_index_html_erb__3222452824600126089_70172683444820'
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.9ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.3ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (118.9ms)
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 23:14:16 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (7.1ms)
+  [1m[36mRoast Load (0.7ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (1352.2ms)
+Completed 500 Internal Server Error in 1376ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `roast' for #<#<Class:0x007fa4b5cc5dd8>:0x007fa4b3dffbd8>
+Did you mean?  roast_url
+               @roasts):
+    11: <table>
+    12:   <thead>
+    13:     <tr>
+    14:         <%= roast.body %>
+    15: 
+    16:       <th colspan="3"></th>
+    17:     </tr>
+  
+app/views/roasts/index.html.erb:14:in `_app_views_roasts_index_html_erb__3222452824600126089_70172672590760'
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (128.4ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (227.9ms)
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 23:14:27 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered roasts/index.html.erb within layouts/application (10.1ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 3.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `body' for nil:NilClass):
+    11: <table>
+    12:   <thead>
+    13:     <tr>
+    14:         <%= @roast.body %>
+    15: 
+    16:       <th colspan="3"></th>
+    17:     </tr>
+  
+app/views/roasts/index.html.erb:14:in `_app_views_roasts_index_html_erb__3222452824600126089_70172680172980'
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (125.3ms)
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 23:14:51 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (4.3ms)
+  [1m[36mRoast Load (0.8ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (31.8ms)
+Completed 500 Internal Server Error in 105ms (ActiveRecord: 2.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `body' for nil:NilClass):
+    19: 
+    20:   <tbody>
+    21:     <% @roasts.each do |roast| %>
+    22:     <%= @roast.body %>
+    23:       <tr>
+    24:         <td ><%= image_tag roast.image, width: 150, height: 150 %></td>
+    25: 
+  
+app/views/roasts/index.html.erb:22:in `block in _app_views_roasts_index_html_erb__3222452824600126089_70172717055480'
+app/views/roasts/index.html.erb:21:in `_app_views_roasts_index_html_erb__3222452824600126089_70172717055480'
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.1ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.0ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (112.1ms)
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 23:15:06 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (8.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (10.1ms)
+  [1m[36mRoast Load (16.9ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (58.3ms)
+Completed 500 Internal Server Error in 125ms (ActiveRecord: 25.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `body' for nil:NilClass):
+    19: 
+    20:   <tbody>
+    21:     <% @roasts.each do |roast| %>
+    22:     <th><%= @roast.body %></th>
+    23:       <tr>
+    24:         <td ><%= image_tag roast.image, width: 150, height: 150 %></td>
+    25: 
+  
+app/views/roasts/index.html.erb:22:in `block in _app_views_roasts_index_html_erb__3222452824600126089_70172707103440'
+app/views/roasts/index.html.erb:21:in `_app_views_roasts_index_html_erb__3222452824600126089_70172707103440'
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.7ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (108.7ms)
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 23:15:16 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (1.6ms)
+  [1m[36mRoast Load (1.4ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (13.8ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 3.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `body' for nil:NilClass):
+    21:     <% @roasts.each do |roast| %>
+    22: 
+    23:       <tr>
+    24:         <th><%= @roast.body %></th>
+    25:         <td ><%= image_tag roast.image, width: 150, height: 150 %></td>
+    26: 
+    27:         <td><%= link_to 'Show', roast %></td>
+  
+app/views/roasts/index.html.erb:24:in `block in _app_views_roasts_index_html_erb__3222452824600126089_70172651534520'
+app/views/roasts/index.html.erb:21:in `_app_views_roasts_index_html_erb__3222452824600126089_70172651534520'
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (14.8ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.5ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (132.6ms)
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 23:15:31 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (7.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (1.5ms)
+  [1m[36mRoast Load (6.5ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (17.7ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 14.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `body' for nil:NilClass):
+    21:     <% @roasts.each do |roast| %>
+    22: 
+    23:       <tr>
+    24:         <td><%= @roast.body %></td>
+    25:         <td ><%= image_tag roast.image, width: 150, height: 150 %></td>
+    26: 
+    27:         <td><%= link_to 'Show', roast %></td>
+  
+app/views/roasts/index.html.erb:24:in `block in _app_views_roasts_index_html_erb__3222452824600126089_70172707707260'
+app/views/roasts/index.html.erb:21:in `_app_views_roasts_index_html_erb__3222452824600126089_70172707707260'
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.3ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.6ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (124.9ms)
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 23:15:38 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (1.2ms)
+  [1m[36mRoast Load (6.5ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 138ms (Views: 123.1ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 23:16:21 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (5.7ms)
+  [1m[36mRoast Load (3.4ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (44.4ms)
+Completed 200 OK in 639ms (Views: 587.4ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 23:16:29 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (18.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (2.4ms)
+  [1m[36mRoast Load (1.3ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 136ms (Views: 109.7ms | ActiveRecord: 19.8ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 23:18:03 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (4.3ms)
+  [1m[36mRoast Load (6.9ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 256ms (Views: 211.6ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 23:18:55 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (5.1ms)
+  [1m[36mRoast Load (0.9ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 270ms (Views: 237.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 23:19:41 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (12.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (3.3ms)
+  [1m[36mRoast Load (1.0ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 296ms (Views: 237.7ms | ActiveRecord: 13.6ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-02-12 23:20:20 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"urlKSUjHzNgVDx2uMwaVWiuHi+I5Fzbb3a3TPonW8upe2QY7zR3TFRRBUBrMs6l1+phIt1Suo1JGlkHz2rTZlQ=="}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (11.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 80ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-12 23:20:20 -0500
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-02-12 23:20:20 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (9.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (41.1ms)
+Completed 200 OK in 290ms (Views: 278.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-02-12 23:20:27 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZpQwDHg0kg1WyZvp8BXPNVEime9ziXX/GPyMJsvyLIkAinVcThDYiLAsXmC/vw2IscCunW7Qdgqiju/PTkQ59Q==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (69.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (44.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", 2017-02-13 04:20:27 UTC], ["last_sign_in_at", 2017-02-12 23:45:42 UTC], ["sign_in_count", 8], ["updated_at", 2017-02-13 04:20:27 UTC], ["id", 2]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 337ms (ActiveRecord: 120.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-12 23:20:27 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/roasts
+Completed 302 Found in 6ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 23:20:27 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (2.3ms)
+  [1m[36mRoast Load (0.6ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 67ms (Views: 58.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-12 23:26:10 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (32.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/roasts
+Completed 302 Found in 69ms (ActiveRecord: 32.2ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 23:26:10 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (7.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (19.5ms)
+  [1m[36mRoast Load (14.9ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (74.5ms)
+Completed 200 OK in 491ms (Views: 453.0ms | ActiveRecord: 22.2ms)
+
+
+Started GET "/roasts/4" for 127.0.0.1 at 2017-02-12 23:26:15 -0500
+Processing by RoastsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (15.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRoast Load (51.2ms)[0m  [1m[34mSELECT  "roasts".* FROM "roasts" WHERE "roasts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering roasts/show.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (3.7ms)
+  [1m[35m (40.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."roast_id" = $1[0m  [["roast_id", 4]]
+  [1m[36mComment Load (2.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."roast_id" = $1[0m  [["roast_id", 4]]
+  [1m[35m (23.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 7], ["votable_type", "Comment"], ["vote_flag", true]]
+  [1m[35m (6.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 11], ["votable_type", "Comment"], ["vote_flag", true]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 12], ["votable_type", "Comment"], ["vote_flag", true]]
+  Rendered collection of comments/_comment.html.erb [3 times] (77.6ms)
+  Rendered comments/_form.html.erb (13.2ms)
+  Rendered roasts/show.html.erb within layouts/application (249.5ms)
+Completed 200 OK in 483ms (Views: 290.6ms | ActiveRecord: 141.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-12 23:26:17 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/roasts
+Completed 302 Found in 27ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/roasts" for 127.0.0.1 at 2017-02-12 23:26:17 -0500
+Processing by RoastsController#index as HTML
+  [1m[36mUser Load (14.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering roasts/index.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (1.7ms)
+  [1m[36mRoast Load (0.8ms)[0m  [1m[34mSELECT "roasts".* FROM "roasts"[0m
+  Rendered roasts/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 210ms (Views: 175.3ms | ActiveRecord: 15.3ms)
+
+

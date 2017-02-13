@@ -1,3 +1,4 @@
+<%= render "layouts/header" %>
 
 
 
@@ -7,21 +8,22 @@
 
 
 
-
-<table>
+<table >
   <thead>
     <tr>
-      <th>Body</th>
-      <th>User</th>
+
+
       <th colspan="3"></th>
     </tr>
   </thead>
 
-  <tbody>
+  <tbody class="tableClass">
     <% @roasts.each do |roast| %>
+
       <tr>
-        <td><%= image_tag roast.image %></td>
         <td><%= roast.body %></td>
+        <td ><%= image_tag roast.image, width: 150, height: 150 %></td>
+
         <td><%= link_to 'Show', roast %></td>
 
         <% if roast.user_id == current_user.id %>

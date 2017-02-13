@@ -1,7 +1,21 @@
+.tableClass {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+tr {
+  border-style: solid;
+}
 .like {
   text-decoration: none;
 }
-
+.index_image {
+  width: 150px;
+  height: 150px;
+}
+.user_email{
+  padding-top: 16px;
+  padding-left: 20px;
+}
  .navStyle {
    height: 75px;
    border-style: solid;
