@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
 
   def index
-    @comments = Comment.all
+    @comments = Comment.all.order(:cached_votes_up => :desc)
   end
   def create
     @roast = Roast.find(params[:roast_id])
