@@ -3,12 +3,13 @@ class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
 
   def index
+    @roasts = Roast.all
     @comments = Comment.all.order(:cached_votes_up => :desc)
   end
   def create
     @roast = Roast.find(params[:roast_id])
     @comment = @roast.comments.create(comment_params)
-    redirect_to roast_path(@roast)
+    redirect_to @roast
   end
 
   def destroy
@@ -18,16 +19,13 @@ class CommentsController < ApplicationController
     redirect_to @roast, :notice => "Roast Deleted"
   end
 #upvote_from user
-#downvote_from user
+
   def upvote
     @comment.upvote_from current_user
-    redirect_to roasts_path
+  redirect_to request.referrer
   end
 
-  def
-    @comment.downvote_from current_user
-    redirect_to roasts_path
-  end
+
 
 private
 def set_comment
