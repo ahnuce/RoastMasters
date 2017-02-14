@@ -10,7 +10,11 @@ tr {
 }
 .indexImage {
 width: 100%;
-height: 300px;
+height: 280px;
+}
+#title {
+  font-family: amarillo;
+  text-shadow: 1px 1px white;
 }
 #showBody {
   color: black;
@@ -52,8 +56,8 @@ margin: 0 auto;
 }
 .showRoastImage {
   border-style: outset;
-  width: 356px;
-  height: 306px;
+  width: 336px;
+  height: 286px;
   border-color: lightblue;
 }
 .comments {
@@ -99,12 +103,13 @@ body {
 
  }
  #signupH2, #loginH2 {
-    font-family: amarillo;
+    font-family: air millhouse outline;
     font-size: 40px;
+    text-shadow: 2px 2px lightblue;
  }
  #loginTitle {
-   font-family: air millhouse outline;
-   font-size: 70px;
+   font-family: amarillo;
+   font-size: 50px;
    border-style: solid;
-   text-shadow: 2px 2px red;
+   text-shadow: 2px 2px lightblue;
  }
