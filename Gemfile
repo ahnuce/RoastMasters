@@ -19,6 +19,8 @@ gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 
 gem 'acts_as_votable', '~> 0.10.0'
 
+gem 'sunspot_rails'
+gem 'sunspot_solr'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets

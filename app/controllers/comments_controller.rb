@@ -3,11 +3,12 @@ class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
 
   def index
+
     @roasts = Roast.all
     @comments = Comment.all.order(:cached_votes_up => :desc)
   end
   def create
-  
+
     @roast = Roast.find(params[:roast_id])
     @comment = @roast.comments.create(comment_params)
     redirect_to @roast
@@ -30,6 +31,7 @@ class CommentsController < ApplicationController
   redirect_to request.referrer
   end
 end
+
 
 
 

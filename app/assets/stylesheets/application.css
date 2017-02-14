@@ -8,6 +8,10 @@ tr {
 .like {
   text-decoration: none;
 }
+#navTitle {
+  font-family: amarillo;
+  text-shadow: 2px 2px white;
+}
 .indexImage {
 width: 100%;
 height: 300px;
@@ -33,7 +37,7 @@ body {
   overflow: hidden;
 }
 
-#comments {
+#comments, #indexComments {
   overflow-y: auto;
   height: 700px;
 }
