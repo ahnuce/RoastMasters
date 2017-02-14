@@ -7,6 +7,7 @@ class CommentsController < ApplicationController
     @comments = Comment.all.order(:cached_votes_up => :desc)
   end
   def create
+  
     @roast = Roast.find(params[:roast_id])
     @comment = @roast.comments.create(comment_params)
     redirect_to @roast
@@ -37,5 +38,5 @@ def set_comment
 @comment = Comment.find(params[:id])
 end
 def comment_params
-  params.require(:comment).permit(:body)
+  params.require(:comment).permit(:body, :user_id)
 end

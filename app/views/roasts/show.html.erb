@@ -1,33 +1,18 @@
 <%= render "layouts/header" %>
 
-
-<!-- <p class="showImage">
-  <h1>  <%= @roast.body %></h1>
-  <%= image_tag @roast.image %>
-</p>
-<div>
--->
-
-
-
 <div class="container">
-
-
 <div class="row">
-  <div class="col-sm-8">
-    <p class="showImage">
-
-      <h1>  <%= @roast.body %></h1>
-      <h2><%= @roast.comments.count %>Roasts</h2>
-      <%= image_tag @roast.image %>
+  <div class="col-sm-6">
+    <p><h1 id="showBody"><%= @roast.body %></h1>
+      <div class="showRoastImage">
+      <%= image_tag @roast.image, size:"350x300" %>
+      </div>
     </p>
     <%= render "comments/form" %>
-
-
   </div>
 
-  <div class="col-sm-4" id="comments" >
-<%# byebug %>
+  <div class="col-sm-6" id="comments">
+  <h1 class="commentSide">Total Roasts: <%= @roast.comments.count %></h1>
 <% @roast.comments.each do |comment| %>
     <% if comment.persisted? %>
       <%= render 'comments/comment', comment: comment %>
@@ -40,7 +25,3 @@
     </div>
   </div>
 </div>
-
-
-<%= link_to 'Edit', edit_roast_path(@roast) %> |
-<%= link_to 'Back', roasts_path %>

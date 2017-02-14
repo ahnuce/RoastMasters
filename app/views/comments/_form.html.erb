@@ -1,10 +1,15 @@
 <%= form_for([@roast, @roast.comments.build]) do |f| %>
 <p>
-<%= f.label :body %>
-<%= f.text_area :body %>
-</p>
-<br>
-<p>
-  <%= f.submit %>
+<h2 class="newRoast">New Roast</h2>
+
+<div id="field1">
+  <%= f.label :name %>
+  <%= f.text_field :email, size: "47x1" %>
+  <br>
+    <%= f.label :roast %>
+  <%= f.text_area :body, size: "46x3" %>
+</div>
+
+  <%= f.submit "Roast It"%>
 </p>
 <% end %>

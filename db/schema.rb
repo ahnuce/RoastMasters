@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170213003553) do
+ActiveRecord::Schema.define(version: 20170214010218) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 20170213003553) do
     t.integer  "cached_weighted_score",   default: 0
     t.integer  "cached_weighted_total",   default: 0
     t.float    "cached_weighted_average", default: 0.0
+    t.integer  "user_id"
+    t.string   "email"
     t.index ["cached_votes_down"], name: "index_comments_on_cached_votes_down", using: :btree
     t.index ["cached_votes_score"], name: "index_comments_on_cached_votes_score", using: :btree
     t.index ["cached_votes_total"], name: "index_comments_on_cached_votes_total", using: :btree
@@ -35,6 +37,7 @@ ActiveRecord::Schema.define(version: 20170213003553) do
     t.index ["cached_weighted_score"], name: "index_comments_on_cached_weighted_score", using: :btree
     t.index ["cached_weighted_total"], name: "index_comments_on_cached_weighted_total", using: :btree
     t.index ["roast_id"], name: "index_comments_on_roast_id", using: :btree
+    t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
   end
 
   create_table "roasts", force: :cascade do |t|
@@ -88,5 +91,6 @@ ActiveRecord::Schema.define(version: 20170213003553) do
   end
 
   add_foreign_key "comments", "roasts"
+  add_foreign_key "comments", "users"
   add_foreign_key "roasts", "users"
 end
