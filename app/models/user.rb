@@ -1,6 +1,4 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
 
   has_many :comments
   acts_as_voter
@@ -9,4 +7,5 @@ class User < ApplicationRecord
   def admin?
     has_role?(:admin)
   end
+
 end

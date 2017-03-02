@@ -1,16 +1,13 @@
 RailsAdmin.config do |config|
-  config.authorize_with do
-    redirect_to main_app.root_path unless warden.user.admin == true
-  end
-  config.authorize_with :cancancan
-  # Popular gems integration
 
-  # == Devise ==
+  ### Popular gems integration
+
+  ## == Devise ==
   # config.authenticate_with do
   #   warden.authenticate! scope: :user
   # end
   # config.current_user_method(&:current_user)
-RailsAdmin.config {|c| c.label_methods << :comments}
+
   ## == Cancan ==
   # config.authorize_with :cancan
 
@@ -24,7 +21,7 @@ RailsAdmin.config {|c| c.label_methods << :comments}
 
   ## == Gravatar integration ==
   ## To disable Gravatar integration in Navigation Bar set to false
-  # config.show_gravatar true
+  # config.show_gravatar = true
 
   config.actions do
     dashboard                     # mandatory

@@ -43,14 +43,8 @@ ActiveRecord::Schema.define(version: 20170214010218) do
   create_table "roasts", force: :cascade do |t|
     t.string   "body"
     t.integer  "user_id"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.string   "image"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-    t.string   "img_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_roasts_on_user_id", using: :btree
   end
 
@@ -68,10 +62,6 @@ ActiveRecord::Schema.define(version: 20170214010218) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.string   "image"
-    t.string   "avatar_file_name"
-    t.integer  "avatar_file_size"
-    t.datetime "avatar_updated_at"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
