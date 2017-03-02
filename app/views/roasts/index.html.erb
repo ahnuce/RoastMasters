@@ -3,14 +3,14 @@
     <% @roasts.each do |roast| %>
     <%= link_to roast do %>
 
-<div class="col-sm-6 col-sm-4">
+<div class="col-sm-4 col-sm-4">
   <div class="thumbnail thumb-box", id="thumb">
     <div class="imageDiv">
     <h2 style="text-align:center;">
       <%= roast.body %>
     </h2>
 
-    <%= image_tag(roast.image, :class => "indexImage") %>
+    <%= image_tag(roast.img_url, :class => "indexImage") %>
 
     <div class="caption" style="text-align:center;">
 
