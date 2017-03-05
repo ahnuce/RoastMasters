@@ -34,7 +34,7 @@ height: 280px;
   text-align: center;
 }
 body {
-  overflow: hidden;
+
 }
 
 #comments {
@@ -44,6 +44,15 @@ body {
 .commentSide {
   border-style: solid;
   text-align: center;
+  overflow-y: scroll;
+}
+.comment_body {
+  font-size: 20px;
+  text-shadow: 2px 1px white;
+  font-family: big caslon;
+}
+.user_email {
+  color: white;
 }
 #thumb {
 padding: 0;

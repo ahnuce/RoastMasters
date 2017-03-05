@@ -7,9 +7,11 @@ class CommentsController < ApplicationController
     @comments = Comment.all.order(:cached_votes_up => :desc)
   end
   def create
-  
+    @user = current_user
     @roast = Roast.find(params[:roast_id])
-    @comment = @roast.comments.create(comment_params)
+    @comment = @roast.comments.build(comment_params)
+    @comment.user = current_user
+    @comment.save
     redirect_to @roast
   end
 

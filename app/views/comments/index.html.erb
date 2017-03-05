@@ -1,13 +1,17 @@
+<center>
+<%= render "layouts/header" %>
 <% @roasts.each do |roast| %>
 
 
     <%= roast.body %>
+    <br>
     <%= image_tag roast.img_url, width: 150, height: 150 %>
+    <br>
 
     <%= link_to 'Show', roast %>
 
     <% if roast.user_id == current_user.id %>
-  <%= link_to 'Edit', edit_roast_path(roast) %>
     <%= render @comments %>
     <% end %>
     <% end %>
+</center>
