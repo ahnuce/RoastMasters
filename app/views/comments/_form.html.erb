@@ -3,8 +3,8 @@
 <h2 class="newRoast">New Roast</h2>
 
 <div id="field1">
-  <%= f.label :email %>
-  <%= f.text_field :email, size: "47x1" %>
+  <%= f.label :user %>
+  <%= f.text_field :email, size: "47x1", value: current_user.email %>
   <br>
     <%= f.label :roast %>
   <%= f.text_area :body, size: "46x3" %>

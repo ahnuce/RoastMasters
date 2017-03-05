@@ -32,6 +32,10 @@ height: 280px;
   border-style: ridge;
   width: 350px;
   text-align: center;
+
+}
+#comment_email {
+  text-align: center;
 }
 body {
 
