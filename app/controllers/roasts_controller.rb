@@ -5,8 +5,12 @@ class RoastsController < ApplicationController
   # GET /roasts
   # GET /roasts.json
   def index
+  if params[:search]
+    @roasts = Roast.where('body LIKE ?', "%#{params[:search]}%")
+  else
     @roasts = Roast.all
   end
+end
 
   # GET /roasts/1
   # GET /roasts/1.json

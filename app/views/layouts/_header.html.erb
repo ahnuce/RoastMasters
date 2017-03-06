@@ -24,11 +24,15 @@
     </ul>
     <form class="navbar-form navbar-right">
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Not Yet Functional">
-        <div class="input-group-btn">
-          <button class="btn btn-default" type="submit">
+        <%= form_tag comments_path, :method => "get", class: "form-group navbar-form" do %>
+            <%= text_field_tag :search, "", :class=>"form-control" %>
+            <%= submit_tag "Search", :class=>"btn btn-default" %>
+            <% end %>
             <i class="glyphicon glyphicon-search"></i>
+
           </button>
+
+
         </div>
       </div>
     </form>
